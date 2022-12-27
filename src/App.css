@@ -1,38 +1,189 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+a {
+  text-decoration: none;
+}
+/* =================
+top-section
+===================== */
+
+.top-section {
+  display: flex;
+  padding: 0px 25px;
+  height: 40px;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #179bd7;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.top-section .link a {
+  font-size: 14px;
+  padding: 15px;
+  color: white;
+  border-left: solid 1px rgba(255, 255, 255, 0.15);
+}
+.top-section .link a:last-child {
+  border-right: solid 1px rgba(255, 255, 255, 0.15);
+}
+.top-section .socail a {
+  font-size: 14px;
+  padding: 15px;
+  color: white;
+  border-left: solid 1px rgba(255, 255, 255, 0.15);
+}
+.top-section .socail a:last-child {
+  border-right: solid 1px rgba(255, 255, 255, 0.15);
+}
+.top-section .socail a:hover {
+  color: #0001fe;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+nav {
+  height: 100px;
+  padding: 0px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #253b80;
+}
+nav img {
+  width: 100px;
+}
+
+nav .items a {
+  padding: 5px 15px;
+  margin-right: 15px;
+  color: white;
+  font-size: 16px;
+  border-left: solid 1px rgba(255, 255, 255, 0.15);
+}
+
+nav .items a:last-child {
+  background-color: brown;
+  border-radius: 5px;
+  margin-right: 0;
+}
+
+nav .items a:hover {
+  border-bottom: 2px solid #179bd7;
+}
+nav .items a:last-child:hover {
+  border-bottom: none;
+}
+.smail-nav button {
+  border: none;
+  background-color: #253B80;
+}
+@media (min-width:901px) {
+  .smail-nav{
+    display: none;
   }
 }
+.smail-nav button>div {
+  width: 35px;
+  height: 4px;
+  margin: 5px;
+  background-color: white;
+}
+.dropdown-menu{
+  width: 270px;
+  background-color: #179bd7;
+}
+.dropdown-item{
+  color: white;
+  line-height: 2;
+  font-size: 18px;
+}
+/* =================home================ */
+.carousel-item img{
+  width: 100%;
+  height: 500px;
+}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.tittle h2{
+  color: #253B80;
+  font-size:18px;
+}
+.department{
+  padding-bottom: 90px;
+ background-color: #5b2e6e1f;
+}
+.department .tittle{
+  color:#253B80;
+  font-size: 36px;
+  margin-bottom:50px;
+background-color:#c500491c;
+text-align: center;
+padding: 50px 0px;
+}
+
+.department-content{
+  width:950px;
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  margin: auto;
+}
+.department-items{
+  width:calc(50% - 30px);
+  height: 200px;
+  display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  background-color:#253B80;
+  margin: 20px 15px;
+  border-radius:8px;
+  border-left:8px solid brown;
+}
+
+.department-items:hover{
+  transform: translate(5px);
+  transition: all 1s;
+}
+.department-items .fa{
+  font-size:50px;
+  color: white;
+  margin-right: 15px;
+}
+
+.department-items h3{
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.department-items .icon{
+ width: 160px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color:#179bd7;
+  margin-right: 15px;
+}
+.department-items .text{
+padding-left: 15px;
+}
+.department-items .text h3{
+  font-size: 22px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* =============Responsive code ================= */
+@media (max-width:990px) {
+  .department-content {
+      width:100%;
+      display: flex;
+      flex-wrap: wrap;
+      margin: auto;
+    }
+}
+
+@media (max-width:900px) {
+  .department-items{
+    width: 95%;
   }
-  to {
-    transform: rotate(360deg);
+  nav .items{
+    display: none;
   }
 }
