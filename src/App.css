@@ -106,23 +106,26 @@ nav .items a:last-child:hover {
   height: 500px;
 }
 
-.tittle h2{
-  color: #253B80;
-  font-size:18px;
-}
 .department{
   padding-bottom: 90px;
- background-color: #5b2e6e1f;
+ background-color:#F7F7F7;
 }
 .department .tittle{
-  color:#253B80;
-  font-size: 36px;
-  margin-bottom:50px;
-background-color:#c500491c;
+  margin-bottom:40px;
 text-align: center;
-padding: 50px 0px;
+padding-top: 50px;
 }
-
+.department .tittle h2{
+      font-weight:500;
+      margin-bottom:11px;
+    }
+.department .tittle hr{
+  width: 50px;
+  margin:20px auto;
+    /* border-bottom: 5px solid;
+    border-image: linear-gradient(45deg, green, blue) 10; */
+    border: 4px solid black;
+}
 .department-content{
   width:950px;
   display: flex;
@@ -168,7 +171,91 @@ padding-left: 15px;
 .department-items .text h3{
   font-size: 22px;
 }
+.news-content{
+  background-color: #FFFFFF;
+}
+.news-content .tittle{
+  text-align: center;
+}
+.news-content .items{
+  border: 1px solid rgba(0, 0, 0, .06);
+  box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15) !important;
+  border-radius:7px;
+  color: white;
+  margin: 25px 10px;
+}
+.news-content .items img{
+  width: 100%;
+  height: 17rem;
+  margin-bottom:20px;
+}
+.news-content .items .items-tittle{
+  width: 100%;
+  height: 140px;
+  margin-bottom: 25px;
+}
+.news-content .items .items-tittle h3{
+  color: black;
+  font-size: 1.4em;
+    font-weight: 600;
+    line-height: 27px;
+    margin: 0 0 14px;
+}
+.news-content .items .link .text{
+  color: #253B80;
+}
+.news-content .items .link .text i{
+  color: brown;
+  margin-right: 7px;
+}
+.news-content .items .link a{
+  color: #253B80;
+}
+.news-content .items .link a:hover {
+  color: #179bd7;
+  text-decoration: underline;
+}
+.view-news{
+  width: 40%;
+  display:flex;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  color: #FFFFFF;
+  background-color: #253b80;
+  border: #253B80;
+  padding-top: 12px;
+    padding-top: .75rem;
+    padding-bottom: 12px;
+    padding-bottom: .75rem;
+    font-weight:500;
+    border-radius: 5px;
+}
+.view-news:hover{
+  color: white;
+}
+/* ==============footer===================== */
+.footer ul li a {
+  color: white;
+  font-size: 15px;
+}
 
+.footer p {
+  font-size: 16px;
+  font-weight: bold;
+  font-family: sans-serif;
+  color: orangered;
+}
+
+.footer-social a {
+  margin-right: 20px;
+  color: white;
+  font-size: 24px;
+}
+.footer img{
+  width:100%;
+  margin-right:50px;
+}
 /* =============Responsive code ================= */
 @media (max-width:990px) {
   .department-content {

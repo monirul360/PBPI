@@ -1,5 +1,6 @@
 import React from "react";
 import Deperment from "../../Component/Deperment/Deperment";
+import News from "../../Component/News/News";
 import Slider from "../../Component/Slider/Slider";
 
 const Home = () => {
@@ -17,12 +18,8 @@ const Home = () => {
       <Slider></Slider>
       {/* Deperment */}
       <Deperment></Deperment>
-      <br />
-      <br />
-      <br />
-      <section>
-        <h2>PBPI</h2>
-      </section>
+      {/* News*/}
+      <News></News>
     </>
   );
 };

@@ -4,7 +4,10 @@ const Deperment = () => {
   return (
     <>
       <section className="department">
-        <h2 className="tittle">Our Department</h2>
+        <div className="tittle">
+          <h2>Our Department</h2>
+          <p>At present there are four Department in the PBPI</p>
+        </div>
         <div className="department-content">
           {/* cmd */}
           <div className="department-items">
