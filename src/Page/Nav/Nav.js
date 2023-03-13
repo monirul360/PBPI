@@ -1,7 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import logo from "./../../Image/Logo.png";
+import auth from "./../../firebas";
+import { useAuthState } from "react-firebase-hooks/auth";
+import { signOut } from "firebase/auth";
 const Nav = () => {
+  const [user] = useAuthState(auth);
+  const logout = () => {
+    signOut(auth);
+  };
+  const [profile, setprofile] = useState(true);
   return (
     <div>
       <section className="top-section">
@@ -38,7 +46,15 @@ const Nav = () => {
             <Link to="/">Department</Link>
             <Link to="/">Result</Link>
             <Link to="/">Admission</Link>
-            <Link to="/">Login</Link>
+            {user ? (
+              <img
+                onClick={() => setprofile(!profile)}
+                src={user?.photoURL}
+                alt=""
+              />
+            ) : (
+              <Link to="/Login">Log In</Link>
+            )}
           </div>
           <div class="dropdown smail-nav">
             <button
@@ -81,6 +97,38 @@ const Nav = () => {
           </div>
         </nav>
       </section>
+      {user ? (
+        <>
+          <div className={`nav-profile ${profile ? "nav-profile-hide" : ""}`}>
+            <div className="d-flex align-items-center bottom-border">
+              <div>
+                <img src={user?.photoURL} alt="" />
+              </div>
+              <div>
+                <h4 className="mb-0">{user?.displayName}</h4>
+              </div>
+            </div>
+            <ul>
+              <li>
+                <Link to="/">Profile</Link>
+              </li>
+              <li>
+                <Link to="/">Admission</Link>
+              </li>
+              <li>
+                <Link to="/">Notice</Link>
+              </li>
+              <li>
+                <Link onClick={logout} to="/#">
+                  Log Out
+                </Link>
+              </li>
+            </ul>
+          </div>
+        </>
+      ) : (
+        <></>
+      )}
     </div>
   );
 };

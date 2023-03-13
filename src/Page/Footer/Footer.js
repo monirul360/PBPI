@@ -5,13 +5,50 @@ const Footer = () => {
   return (
     <>
       <section>
-        <footer className="footer bg-dark p-5 text-white">
+        <footer className="footer p-5 text-white">
           <div className="container">
             <div className="row">
               <div className="col-md-4">
                 <div>
                   <p className="lead">Academic & Admission</p>
-                  <ul className="navbar-nav text-white"></ul>
+                  <ul className="navbar-nav text-white">
+                    <li>
+                      <Link
+                        className="nav-link active"
+                        aria-current="page"
+                        to="/about"
+                      >
+                        Academic Calender
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        className="nav-link active"
+                        aria-current="page"
+                        to="/about"
+                      >
+                        Admission
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        className="nav-link active"
+                        aria-current="page"
+                        to="/about"
+                      >
+                        Study Program
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        className="nav-link active"
+                        aria-current="page"
+                        to="/about"
+                      >
+                        Course Registration
+                      </Link>
+                    </li>
+                  </ul>
                 </div>
               </div>
               <div className="col-md-4">
@@ -22,7 +59,7 @@ const Footer = () => {
                       <Link
                         className="nav-link active"
                         aria-current="page"
-                        to="/about"
+                        to="/aboutUs"
                       >
                         About us
                       </Link>
@@ -41,6 +78,15 @@ const Footer = () => {
                         className="nav-link active"
                         aria-current="page"
                         to="/member"
+                      >
+                        Notice board
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        className="nav-link active"
+                        aria-current="page"
+                        to="/teacher"
                       >
                         Teachers
                       </Link>
@@ -100,9 +146,11 @@ const Footer = () => {
           <br />
           <hr />
           <br />
-          <p className="text-white">
-            All Rights Reserved To Computer Department
-          </p>
+          <div className="container">
+            <p className="text-white">
+              All Rights Reserved To Computer Department
+            </p>
+          </div>
         </footer>
       </section>
     </>

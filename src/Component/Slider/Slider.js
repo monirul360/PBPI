@@ -1,10 +1,11 @@
 import React from "react";
 import slider1 from "./../../Image/Slider/1.jpg";
 import slider2 from "./../../Image/Slider/2.jpg";
+import slider3 from "./../../Image/Slider/3.jpg";
 const Slider = () => {
   return (
     <>
-      <div className="container slider mb-5">
+      <div className="slider mb-5">
         <div
           id="carouselExampleIndicators"
           class="carousel slide"
@@ -34,13 +35,13 @@ const Slider = () => {
           </div>
           <div class="carousel-inner">
             <div class="carousel-item active">
+              <img src={slider3} class="d-block w-100" alt="..." />
+            </div>
+            <div class="carousel-item">
               <img src={slider1} class="d-block w-100" alt="..." />
             </div>
             <div class="carousel-item">
               <img src={slider2} class="d-block w-100" alt="..." />
-            </div>
-            <div class="carousel-item">
-              <img src={slider1} class="d-block w-100" alt="..." />
             </div>
           </div>
           <button

@@ -1,4 +1,5 @@
 import React from "react";
+import About from "../../Component/About/About";
 import Deperment from "../../Component/Deperment/Deperment";
 import News from "../../Component/News/News";
 import Slider from "../../Component/Slider/Slider";
@@ -16,6 +17,8 @@ const Home = () => {
       </div>
       {/* Slider */}
       <Slider></Slider>
+      {/* About us */}
+      <About></About>
       {/* Deperment */}
       <Deperment></Deperment>
       {/* News*/}

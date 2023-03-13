@@ -7,7 +7,7 @@ const News = () => {
       <section className="py-5 news-content">
         <div className="tittle">
           <h1>Latest News</h1>
-          <p>Stay informed and read the latest news of DUET</p>
+          <p>Stay informed and read the latest news of PBPI</p>
         </div>
         <div className="container py-5">
           <div className="row">
